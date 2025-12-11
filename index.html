@@ -13,10 +13,7 @@
     <div class="container">
         <div class="carsour">
             <img id="image" src="" alt="">
-            <div style="display: flex; justify-content: space-between; padding-left: 20px; padding-right: 20px; margin-top: 20px;">
-                <button id="pre" style="width: 100px; height: 40px;color: white; background-color: darkslateblue; border-radius: 10px;">Previus</button>
-                <button id="next"  style="width: 100px; height: 40px;color: white; background-color: darkslateblue; border-radius: 10px;">Next</button>
-            </div>
+            
         </div>
     </div>
 
@@ -25,8 +22,7 @@
     <script>
 
         let image = document.getElementById("image")
-        let pre = document.getElementById("pre")
-        let next = document.getElementById("next")
+
 
         let count = 0
         let array = [1, 2, 3, 4, 5]
@@ -48,25 +44,6 @@
         show(array)
 
 
-        next.addEventListener("click", function (array) {
-            count++
-
-            if (count == images.length) {
-                count = 0
-            }
-            show(array)
-        })
-
-
-        pre.addEventListener("click", function (array) {
-
-
-            if (count == 0) {
-                count = images.length
-            }
-            count--
-            show(array)
-        })
 
 
         setInterval(()=>{
